@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block mainblock %}
+
+<div class="card-header">
+  <h2>Upload recordings</h2>
+</div>
+<div class="card-body">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input name="type" type="hidden" value="upload">
+            <div>
+                <!--drop down menu to choose Golfer-->
+                <label>Upload for Golfer:</label>
+                <select name="users" id="userSelect"> 
+                    <option value = ""> Select One User</option>
+                    {%for aUser in Users%}
+                    <option value="{{aUser.email}}">{{aUser.name}} </option>
+                    {%endfor%}
+                </select>
+
+                <!--drop down menu to choose file type-->
+                <label>with data type of:</label>
+                <select name="datatype" id="datatypeSelect"> 
+                    <option value = "GolfSet"> Golf Set</option>
+                    <option value = "Swings"> Swings</option>
+                </select>
+
+                <!--paragraph information-->
+                <p>
+                Golf Set Line:<br>
+                label,clubtype,loft,weight,size/material/style,length,weight,material,flex,diameter,weight,material<br><br>
+        
+                Swing Line:<br>
+                swing_time,swing_speed,club_label<br>
+                </p> 
+
+                <!--Choose file and upload-->
+                <label for='upload'>Upload CSV or txt file</label>
+                <input class="upload" id='upload' name='file' type='file' accept='.csv, .txt' required>
+            </div>
+            <div>
+                <input type="submit" value="Upload" type="Upload"/>
+            </div>
+        </form>
+          
+</div>
+{% endblock %}

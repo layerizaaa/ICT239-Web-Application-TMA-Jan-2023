@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block mainblock %}
+
+<div class="card-header">
+    <h3>Swing Chart</h3>
+</div>
+<div class="card-body">
+        <!-- Create a div where the graph will take place -->
+        <div class="chart-container" style="position: relative; width: 100%; height: 80vh;">
+            <canvas id="swingChart" width="400" height="300" email_id="{{email_id}}"></canvas>
+        </div>        
+</div>
+
+<script src="{{ url_for('static', filename='js/swingchart.js') }}"></script>
+
+{% endblock %}
