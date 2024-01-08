@@ -42,7 +42,7 @@ The project is structured into several components:
 
 ## How to Run
 
-1. **Clone the repository:**
+1. **Clone the repository**
 
 2. **Install dependencies:**
 bash
