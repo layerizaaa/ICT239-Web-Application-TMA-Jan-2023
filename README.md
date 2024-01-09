@@ -4,7 +4,7 @@
 
 Golf Distance Calculator is a web application project for my ICT239 Web Application Module, which is designed for golfers to log their swings, track distances, and visualize their performance. The application is built using Python with the Flask framework for the backend, MongoDB as the database, and various frontend technologies.
 
-Note: You may find the assignment questions, and documentation of my solution in this repository.
+Note: You may find the documentation of my project in this repository.
 
 ## Project Structure
 
